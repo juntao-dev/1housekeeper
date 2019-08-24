@@ -18,6 +18,7 @@ class LandingPage extends React.Component {
             <CardDecks />
           </Jumbotron>
         </Jumbotron>
+        <div className="container">&copy; Juntao Zeng 2019</div>
       </div>
     );
   }
