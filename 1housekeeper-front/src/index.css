@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Sanchez&display=swap");
 
+*:visited {
+  color: black;
+}
 body {
   margin: 0;
   font-family: "Sanchez", serif !important;
