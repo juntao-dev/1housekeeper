@@ -1,0 +1,12 @@
+.videojumbotron {
+  position: relative;
+  z-index: -101;
+  overflow: hidden;
+  height: 80vh;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  opacity: 0.5;
+}
