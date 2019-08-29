@@ -15,7 +15,7 @@ const CardDecks = () => {
         <Link to="/dashboard">
           <Card.Img variant="top" src={house} />
           <Card.Body>
-            <Card.Title>Dashboard</Card.Title> 
+            <Card.Title className="cardtitle">Dashboard</Card.Title> 
           </Card.Body>
         </Link>
       </Card>
