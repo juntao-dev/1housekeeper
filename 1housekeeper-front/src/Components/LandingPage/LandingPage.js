@@ -11,7 +11,7 @@ class LandingPage extends React.Component {
     return (
       <div>
         <Jumbotron className="videojumbotron" style={{ padding: 0 }}>
-          <video autoplay="autoplay" loop="loop" muted="muted">
+          <video autoPlay="autoplay" loop="loop" muted="muted">
             <source src={video} type="video/mp4" />
           </video>
           <Jumbotron style={{ zIndex: 100 }}>
