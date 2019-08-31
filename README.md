@@ -4,3 +4,6 @@
 
 Front End part of the 1houseKeeper app. It provides features that aim to help better household management.
 
+**References**
+
+- https://undraw.co/illustrations

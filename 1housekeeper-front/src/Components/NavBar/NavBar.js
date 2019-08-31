@@ -1,19 +1,24 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+
+import styled from 'styled-components';
+
+const Bar = styled.div`
+  background: white;
+  opacity: 0.5;
+  width: 100vw;
+  padding: 10px;
+  top: 0;
+  position: fixed;
+`;
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg" style={{position: "absolute", width: "100vw"}}>
+    <Bar>
       <Link to="/">
-        <Navbar.Brand>1houseKeeper</Navbar.Brand>
+       <span>1houseKeeper</span>
       </Link>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto" />
-      </Navbar.Collapse>
-    </Navbar>
+    </Bar>
   );
 };
 

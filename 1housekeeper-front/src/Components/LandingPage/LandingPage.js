@@ -1,17 +1,16 @@
 import React from "react";
-import CardDecks from "./CardDecks";
 import "./LandingPage.css";
+import HouseBanner from './HouseBanner';
 
 class LandingPage extends React.Component {
   render() {
     return (
       <div className="pageWrapper">
         <div>
-          <div style={{padding: "10% 5%"}}>
-            <CardDecks />
-          </div>
+          <HouseBanner />
+          
         </div>
-        <div className="footerbox">&copy; Juntao Zeng 2019</div>
+        <div className="footerbox">&copy; 1houseKeeper 2019</div>
       </div>
     );
   }
