@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Sanchez&display=swap");
 
+*:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   font-family: "Sanchez", serif !important;
