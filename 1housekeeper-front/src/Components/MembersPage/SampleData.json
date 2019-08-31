@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Jack Travis",
+    "birthday": "01/01/2001",
+    "photo": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    "phone": "0422827184",
+    "email": "jack.travis@mail.com",
+    "description": "Funny and life loving.",
+    "social": {
+      "facebook": "www.facebook.com",
+      "twitter": "www.twitter.com",
+      "linkedin": "www.linkedin.com"
+    }
+  }
+]
