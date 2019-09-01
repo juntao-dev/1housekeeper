@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 const Bar = styled.div`
   background: white;
-  opacity: 0.5;
   width: 100vw;
   padding: 10px;
   top: 0;

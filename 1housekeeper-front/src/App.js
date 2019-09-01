@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './Components/NavBar';
 import LandingPage from './Components/LandingPage';
 import MembersPage from './Components/MembersPage';
+import FooterBar from './Components/FooterBar';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // import logo from './logo.svg';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/members" exact component={MembersPage} />
           <Route path="/property" exact component={property} />
         </div>
+        <FooterBar />
       </Router>
     </div>
   );
