@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
+
+import MembersList from "./MembersList";
 
 const MembersPage = () => {
-    return (
-        <div style={{position: "absolute", bottom: "0"}}>
-            Hello Members
-        </div>
-    );
-}
+  return <MembersList />;
+};
 
 export default MembersPage;
