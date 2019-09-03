@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SampleMembers from "./SampleMembers";
+import MemberCard from "./MemberCard";
 
 const ListWrapper = styled.div``;
 
@@ -10,9 +11,12 @@ const memberlisting = SampleMembers.map(member => {
 
 const MembersList = props => {
   return (
-    <ListWrapper>
-      <ul>{memberlisting}</ul>
-    </ListWrapper>
+    <div>
+      <ListWrapper>
+        <ul>{memberlisting}</ul>
+      </ListWrapper>
+      <MemberCard />
+    </div>
   );
 };
 
