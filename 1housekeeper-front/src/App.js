@@ -1,8 +1,8 @@
-import React from 'react';
-import NavBar from './Components/NavBar';
-import LandingPage from './Components/LandingPage';
-import MembersPage from './Components/MembersPage';
-import FooterBar from './Components/FooterBar';
+import React from "react";
+import NavBar from "./Components/NavBar";
+import LandingPage from "./Components/LandingPage";
+import MembersPage from "./Components/MembersPage";
+import FooterBar from "./Components/FooterBar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // import logo from './logo.svg';
@@ -10,22 +10,17 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function dashboard() {
   return (
-    <div style={{position: "absolute", bottom: "0"}}>
-      Hello Dashboard
-    </div>
+    <div style={{ position: "absolute", bottom: "0" }}>Hello Dashboard</div>
   );
 }
 
 function property() {
   return (
-    <div style={{position: "absolute", bottom: "0"}}>
-      Hello Property
-    </div>
+    <div style={{ position: "absolute", bottom: "0" }}>Hello Property</div>
   );
 }
 
 function App() {
-
   return (
     <div className="App">
       <Router>
@@ -36,8 +31,8 @@ function App() {
           <Route path="/members" exact component={MembersPage} />
           <Route path="/property" exact component={property} />
         </div>
-        <FooterBar />
       </Router>
+      <FooterBar />
     </div>
   );
 }
