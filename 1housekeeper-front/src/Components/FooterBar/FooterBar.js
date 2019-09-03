@@ -7,7 +7,7 @@ const FooterBox = styled.div`
   padding: 10px;
   background: white;
   text-align: left;
-  position: absolute;
+  position: fixed;
 `;
 
 const FooterBar = props => {
