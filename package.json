@@ -1,0 +1,22 @@
+{
+  "name": "1housekeeper",
+  "version": "1.0.0",
+  "description": "[Trello Board](https://trello.com/b/EQ3X5Z0G/1housekeeper)",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd 1housekeeper-front && react-scripts start",
+    "build": "cd 1housekeeper-front && react-scripts build",
+    "test": "cd 1housekeeper-front && CI=true react-scripts test",
+    "eject": "cd 1housekeeper-front && react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juntao-dev/1housekeeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juntao-dev/1housekeeper/issues"
+  },
+  "homepage": "https://github.com/juntao-dev/1housekeeper#readme"
+}
