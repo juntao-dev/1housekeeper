@@ -1,6 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
-import HouseBanner from './HouseBanner';
+import HouseBanner from "./HouseBanner";
+import CardDeck from "./CardDeck";
 
 class LandingPage extends React.Component {
   render() {
@@ -8,9 +9,8 @@ class LandingPage extends React.Component {
       <div className="pageWrapper">
         <div>
           <HouseBanner />
-          
+          <CardDeck />
         </div>
-        
       </div>
     );
   }

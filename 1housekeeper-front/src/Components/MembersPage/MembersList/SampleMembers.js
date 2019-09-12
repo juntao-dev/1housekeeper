@@ -2,7 +2,7 @@ const SampleMembers = [
   {
     id: 1,
     name: "Tom Jones",
-    role: "Father",
+    role: "House Owner",
     phone: "0425321524",
     email: "tomjones@email.com",
     photo:
@@ -11,7 +11,7 @@ const SampleMembers = [
   {
     id: 2,
     name: "Jane Jones",
-    role: "Mother",
+    role: "Flatmate",
     phone: "0425321532",
     email: "janejones@email.com",
     photo:
@@ -20,7 +20,7 @@ const SampleMembers = [
   {
     id: 3,
     name: "Tim Jones",
-    role: "Son",
+    role: "Flatmate",
     phone: "0452321599",
     email: "timjones@email.com",
     photo:
@@ -29,7 +29,7 @@ const SampleMembers = [
   {
     id: 4,
     name: "Jack Jones",
-    role: "Son",
+    role: "Flatmate",
     phone: "0452321599",
     email: "timjones@email.com",
     photo:
@@ -38,7 +38,7 @@ const SampleMembers = [
   {
     id: 5,
     name: "Kate Jones",
-    role: "Daughter",
+    role: "Flatmate",
     phone: "0452321599",
     email: "timjones@email.com",
     photo:
