@@ -11,6 +11,7 @@ import styled from "styled-components";
 
 const PageBody = styled.div`
   margin-top: 2.5rem;
+  margin-bottom: 1rem;
 `;
 
 function dashboard() {

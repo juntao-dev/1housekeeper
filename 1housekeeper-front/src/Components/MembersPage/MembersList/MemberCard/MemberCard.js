@@ -1,15 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const sampleData = {
-  name: "Tom Jones",
-  role: "Father"
-};
-
 const MemberCardWrapper = styled.div`
+  /* border: 1px solid green; */
   background-color: lightgray;
-  margin: 1rem;
-  width: 50vw;
+  margin: 0.3rem;
   height: 20vh;
   display: grid;
   grid-template-columns: 25% auto;
@@ -17,15 +12,21 @@ const MemberCardWrapper = styled.div`
 `;
 
 const CardImageWrapper = styled.div`
-  background-image: url("https://img.icons8.com/plasticine/100/000000/user.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  width: 100%;
-  height: 100%;
-  margin-right: 0.5rem;
 
+  padding: 10px;
+  object-fit: cover;
+  img {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    /* margin-right: 0.5rem; */
+  }
   /* border: 1px solid red; */
 `;
 
@@ -40,13 +41,15 @@ const CardTextWrapper = styled.div`
 const MemberCard = props => {
   return (
     <MemberCardWrapper>
-      <CardImageWrapper></CardImageWrapper>
+      <CardImageWrapper>
+        <img src={props.photo} alt={"photo of" + props.name} />
+      </CardImageWrapper>
       <CardTextWrapper>
         <h4>
-          {sampleData.name}&nbsp;({sampleData.role})
+          {props.name}&nbsp;({props.role})
         </h4>
-        <span>Mobile: 0453228943</span> <br />
-        <span>Email: tim.jones@email.com</span>
+        <span>Mobile: {props.mobile}</span> <br />
+        <span>Email: {props.email}</span>
       </CardTextWrapper>
     </MemberCardWrapper>
   );
