@@ -8,3 +8,9 @@ script:
   - cd 1housekeeper-front
   - npm install
   - npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: $heroku_api_key
+  app:
+    master: onehousekeeper

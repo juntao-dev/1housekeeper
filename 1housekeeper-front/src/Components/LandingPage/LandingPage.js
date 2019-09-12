@@ -10,7 +10,7 @@ class LandingPage extends React.Component {
           <HouseBanner />
           
         </div>
-        <div className="footerbox">&copy; 1houseKeeper 2019</div>
+        
       </div>
     );
   }

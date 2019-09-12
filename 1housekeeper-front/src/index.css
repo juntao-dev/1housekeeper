@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Sanchez&display=swap");
 
-*:visited {
+*:link,
+*:visited,
+*:hover {
   color: black;
+  text-decoration: none;
+  box-sizing: inherit;
 }
 
+a.link,
+a.visited,
 a:hover {
   text-decoration: none;
 }
@@ -13,6 +19,7 @@ body {
   font-family: "Sanchez", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
