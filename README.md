@@ -4,6 +4,16 @@
 
 Front End part of the 1houseKeeper app. It provides features that aim to help better household management.
 
+---
+
+**Knowledge Applied**
+
+- **Front**: `HTML`, `CSS`, `React`, `React Router`, `Styled-Component`
+- **Testing**: `Jest`
+- **CI/CD**: `TravisCI`
+
+---
+
 **CI/CD**
 
 - Continuous Integration is set up with [Travis CI](https://travis-ci.org/) on the master branch
