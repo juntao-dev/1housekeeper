@@ -2,7 +2,19 @@
 
 [Trello Board](https://trello.com/b/EQ3X5Z0G/1housekeeper)
 
+![Home Page](./assets/readme_home.jpg)
+
 Front End part of the 1houseKeeper app. It provides features that aim to help better household management.
+
+---
+
+**Knowledge Applied**
+
+- **Front**: `HTML`, `CSS`, `React`, `React Router`, `Styled-Component`
+- **Testing**: `Jest`
+- **CI/CD**: `TravisCI`
+
+---
 
 **CI/CD**
 
