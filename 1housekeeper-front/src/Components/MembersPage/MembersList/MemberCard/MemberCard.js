@@ -18,7 +18,7 @@ const CardImageWrapper = styled.div`
   background-position: 50% 50%;
 
   padding: 10px;
-  object-fit: cover;
+  /* object-fit: cover; */
   img {
     height: 100%;
     width: 100%;
