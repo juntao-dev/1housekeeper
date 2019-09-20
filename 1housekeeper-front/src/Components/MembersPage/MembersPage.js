@@ -11,15 +11,17 @@ const MembersPageWrapper = styled.div`
 const MembersInfoBox = styled.div`
   /* border: 1px solid blue; */
   text-align: center;
+  height: 90vh;
+  overflow: scroll;
 `;
 
 const MembersPage = () => {
   return (
     <MembersPageWrapper>
-      <div>Group</div>
       <MembersInfoBox>
         <MembersList />
       </MembersInfoBox>
+      <div>Group</div>
     </MembersPageWrapper>
   );
 };
