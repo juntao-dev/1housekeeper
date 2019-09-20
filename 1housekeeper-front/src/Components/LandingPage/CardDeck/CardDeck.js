@@ -7,13 +7,21 @@ const CardDeckWrapper = styled.div`
   /* background-color: #27e374; */
   background-image: linear-gradient(#27e374, #ccf5dd);
   height: 40vh;
-  margin: 20px 0;
+  margin: 20px 10px;
   padding-top: 1rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   justify-content: space-evenly;
-  align-items: stretch;
+
+  @media (max-width: 600px) {
+    font-size: 80%;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
 `;
 
 const CardDeck = props => {

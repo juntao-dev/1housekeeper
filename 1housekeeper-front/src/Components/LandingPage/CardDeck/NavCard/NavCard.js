@@ -11,6 +11,11 @@ const NavCardWrapper = styled.div`
   cursor: pointer;
   grid-template-rows: 80% auto;
 
+  @media (max-width: 600px) {
+    width: 50%;
+    display: inline-block;
+  }
+
   /* a {
     width: 100%;
     height: 100%;
