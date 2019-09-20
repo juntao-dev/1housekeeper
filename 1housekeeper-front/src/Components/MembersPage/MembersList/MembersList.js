@@ -6,9 +6,10 @@ import MemberCard from "./MemberCard";
 const ListWrapper = styled.ul`
   list-style-type: none;
   padding: 0;
+  /* border-radius: 10px; */
 `;
 
-const MmebersListWrapper = styled.div`
+const MembersListWrapper = styled.div`
   display: inline-block;
   /* border: 1px solid red; */
   width: 100%;
@@ -33,9 +34,9 @@ const memberlisting = SampleMembers.map(member => {
 
 const MembersList = props => {
   return (
-    <MmebersListWrapper>
+    <MembersListWrapper>
       <ListWrapper>{memberlisting}</ListWrapper>
-    </MmebersListWrapper>
+    </MembersListWrapper>
   );
 };
 

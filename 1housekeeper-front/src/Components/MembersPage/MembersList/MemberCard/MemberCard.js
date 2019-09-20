@@ -16,7 +16,7 @@ const CardImageWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-
+  border-radius: 10px;
   padding: 10px;
   /* object-fit: cover; */
   img {
