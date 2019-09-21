@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import MembersList from "./MembersList";
@@ -27,13 +27,20 @@ const MembersAdminBox = styled.div`
   overflow: hidden;
 `;
 
-const currentMember = SampleMembers[0];
+// let currentMember = SampleMembers[0];
 
 const MembersPage = () => {
+  const [currentMember, setCurrentMember] = useState(SampleMembers[0]);
+  const selectCurrentMember = id => {
+    // console.log("clicked on id" + id);
+    setCurrentMember(SampleMembers[id - 1]);
+    console.log("current member " + JSON.stringify(SampleMembers[id - 1]));
+  };
+
   return (
     <MembersPageWrapper>
       <MembersInfoBox>
-        <MembersList />
+        <MembersList currentMemberHandle={selectCurrentMember} />
       </MembersInfoBox>
       <MembersAdmin member={currentMember} />
     </MembersPageWrapper>

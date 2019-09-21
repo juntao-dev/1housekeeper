@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const NewMemberForm = props => {
   const [member, setMember] = useState({
@@ -9,12 +9,24 @@ const NewMemberForm = props => {
     photo: props.member.photo,
     rent: props.member.rent
   });
-  // const [name, setName] = useState("Jon");
-  // const [role, setRole] = useState("Flat Mate");
-  // const [mobile, setMobile] = useState("0425321524");
-  // const [email, setEmail] = useState("example@mail.com");
-  // const [profile, setProfile] = useState("image.com/example.jpg");
-  // const [rent, setRent] = useState("300");
+
+  useEffect(() => {
+    setMember({
+      name: props.member.name,
+      role: props.member.role,
+      mobile: props.member.mobile,
+      email: props.member.email,
+      photo: props.member.photo,
+      rent: props.member.rent
+    });
+  }, [
+    props.member.email,
+    props.member.mobile,
+    props.member.name,
+    props.member.photo,
+    props.member.rent,
+    props.member.role
+  ]);
 
   const handleChange = name => event => {
     setMember({ ...member, [name]: event.target.value });

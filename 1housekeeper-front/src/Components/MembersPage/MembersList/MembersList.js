@@ -15,27 +15,34 @@ const MembersListWrapper = styled.div`
   width: 100%;
 `;
 
-const memberlisting = SampleMembers.map(member => {
-  return (
-    <div>
-      <li key={member.id}>
-        <MemberCard
+const memberlisting = handler =>
+  SampleMembers.map(member => {
+    return (
+      <div>
+        <li
           key={member.id}
-          name={member.name}
-          photo={member.photo}
-          role={member.role}
-          mobile={member.phone}
-          email={member.email}
-        />
-      </li>
-    </div>
-  );
-});
+          onClick={() => {
+            handler(member.id);
+          }}
+        >
+          <MemberCard
+            key={member.id}
+            name={member.name}
+            photo={member.photo}
+            role={member.role}
+            mobile={member.phone}
+            email={member.email}
+          />
+        </li>
+      </div>
+    );
+  });
 
 const MembersList = props => {
+  let currentMemberHandle = props.currentMemberHandle;
   return (
     <MembersListWrapper>
-      <ListWrapper>{memberlisting}</ListWrapper>
+      <ListWrapper>{memberlisting(currentMemberHandle)}</ListWrapper>
     </MembersListWrapper>
   );
 };
