@@ -4,12 +4,18 @@ import { Link } from "react-router-dom";
 
 const NavCardWrapper = styled.div`
   /* border: 1px solid orange; */
+  height: 100%;
   width: 20vw;
   /* height: 100%; */
   margin: 10px;
   display: grid;
   cursor: pointer;
   grid-template-rows: 80% auto;
+
+  @media (max-width: 600px) {
+    width: 50%;
+    display: inline-block;
+  }
 
   /* a {
     width: 100%;
@@ -37,13 +43,15 @@ const NavCardLabelWrapper = styled.div`
 
 const NavCard = props => {
   return (
-    <NavCardWrapper>
-      <NavCardImageWrapper>
-        <img src={props.image} alt="members" />
-      </NavCardImageWrapper>
+    <Link to={`/${props.page}`}>
+      <NavCardWrapper>
+        <NavCardImageWrapper>
+          <img src={props.image} alt="members" />
+        </NavCardImageWrapper>
 
-      <NavCardLabelWrapper>{props.label}</NavCardLabelWrapper>
-    </NavCardWrapper>
+        <NavCardLabelWrapper>{props.label}</NavCardLabelWrapper>
+      </NavCardWrapper>
+    </Link>
   );
 };
 
