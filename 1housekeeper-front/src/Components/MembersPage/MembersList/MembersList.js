@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SampleMembers from "./SampleMembers";
+import SampleMembers from "../SampleMembers";
 import MemberCard from "./MemberCard";
 
 const ListWrapper = styled.ul`

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import MembersList from "./MembersList";
 import MembersAdmin from "./MembersAdmin";
+import SampleMembers from "./SampleMembers";
 
 const MembersPageWrapper = styled.div`
   display: grid;
@@ -26,13 +27,15 @@ const MembersAdminBox = styled.div`
   overflow: hidden;
 `;
 
+const currentMember = SampleMembers[0];
+
 const MembersPage = () => {
   return (
     <MembersPageWrapper>
       <MembersInfoBox>
         <MembersList />
       </MembersInfoBox>
-      <MembersAdmin />
+      <MembersAdmin member={currentMember} />
     </MembersPageWrapper>
   );
 };

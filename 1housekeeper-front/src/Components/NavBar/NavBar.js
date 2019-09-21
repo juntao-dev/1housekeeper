@@ -39,7 +39,7 @@ const NavBar = () => {
       </LogoWrapper>
       <NavButtonGroupWrapper>
         <NavButtonWrapper>
-          <Link to="/members">Members</Link>
+          <Link to="/about">About</Link>
         </NavButtonWrapper>
       </NavButtonGroupWrapper>{" "}
     </Bar>

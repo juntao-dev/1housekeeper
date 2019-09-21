@@ -5,11 +5,13 @@ import MembersPage from "./Components/MembersPage";
 import FooterBar from "./Components/FooterBar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled from "styled-components";
+import AboutPage from "./Components/AboutPage";
 
 // import logo from './logo.svg';
 // import './App.css';
 
 const PageBody = styled.div`
+  height: 100%;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 `;
@@ -36,6 +38,7 @@ function App() {
           <Route path="/dashboard" exact component={dashboard} />
           <Route path="/members" exact component={MembersPage} />
           <Route path="/property" exact component={property} />
+          <Route path="/about" exact component={AboutPage} />
         </PageBody>
       </Router>
       <FooterBar />

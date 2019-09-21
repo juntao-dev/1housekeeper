@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import NewMemberForm from "./NewMemberForm";
 
 const MembersAdminWrapper = styled.div`
   /* border: 1px solid blue; */
@@ -24,15 +25,21 @@ const MembersAdminCard = styled.div`
   margin-top: 10px;
 `;
 
+const sampleMember = {
+  name: "Jon Snow",
+  role: "Flat Mate",
+  mobile: "0423552183",
+  email: "jonsnow@example.com",
+  profile: "www.image.com/profile.jpg",
+  rent: "300"
+};
+
 const MembersAdmin = props => {
   return (
     <MembersAdminWrapper>
+      <NewMemberForm member={props.member} />
       {/* <MembersAdminCard>New Member</MembersAdminCard>
       <MembersAdminCard>Message Everyone</MembersAdminCard> */}
-      <form>
-        <label for="name">Name</label>
-        <input id="name" type="text"></input>
-      </form>
     </MembersAdminWrapper>
   );
 };
