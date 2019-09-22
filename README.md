@@ -2,6 +2,8 @@
 
 [Trello Board](https://trello.com/b/EQ3X5Z0G/1housekeeper)
 
+**Demo:** [https://vibrant-bassi-ad96bd.netlify.com/](https://vibrant-bassi-ad96bd.netlify.com/)
+
 ![Home Page](./assets/readme_home.jpg)
 
 Front End part of the 1houseKeeper app. It provides features that aim to help better household management.

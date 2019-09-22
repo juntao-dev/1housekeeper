@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import SampleMembers from "../SampleMembers";
 import MemberCard from "./MemberCard";
+import SampleMembers from "../SampleMembers";
 
 const ListWrapper = styled.ul`
   list-style-type: none;
@@ -15,34 +15,40 @@ const MembersListWrapper = styled.div`
   width: 100%;
 `;
 
-const memberlisting = handler =>
-  SampleMembers.map(member => {
-    return (
-      <div>
-        <li
-          key={member.id}
-          onClick={() => {
-            handler(member.id);
-          }}
-        >
-          <MemberCard
-            key={member.id}
-            name={member.name}
-            photo={member.photo}
-            role={member.role}
-            mobile={member.phone}
-            email={member.email}
-          />
-        </li>
-      </div>
-    );
-  });
-
 const MembersList = props => {
   let currentMemberHandle = props.currentMemberHandle;
+  let appMembers = props.appMembers;
+  const [members, setMembers] = useState(appMembers);
+  // useEffect(setMembers(appMembers));
+
+  const memberlisting = (appMembers, handler) =>
+    members.map(member => {
+      return (
+        <div>
+          <li
+            key={member.id}
+            onClick={() => {
+              handler(member.id);
+            }}
+          >
+            <MemberCard
+              key={member.id}
+              name={member.name}
+              photo={member.photo}
+              role={member.role}
+              mobile={member.phone}
+              email={member.email}
+            />
+          </li>
+        </div>
+      );
+    });
+
   return (
     <MembersListWrapper>
-      <ListWrapper>{memberlisting(currentMemberHandle)}</ListWrapper>
+      <ListWrapper>
+        {memberlisting(appMembers, currentMemberHandle)}
+      </ListWrapper>
     </MembersListWrapper>
   );
 };

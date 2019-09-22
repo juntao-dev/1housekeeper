@@ -25,19 +25,13 @@ const MembersAdminCard = styled.div`
   margin-top: 10px;
 `;
 
-const sampleMember = {
-  name: "Jon Snow",
-  role: "Flat Mate",
-  mobile: "0423552183",
-  email: "jonsnow@example.com",
-  profile: "www.image.com/profile.jpg",
-  rent: "300"
-};
-
 const MembersAdmin = props => {
   return (
     <MembersAdminWrapper>
-      <NewMemberForm member={props.member} />
+      <NewMemberForm
+        member={props.member}
+        updateMemberDetails={props.updateMemberDetails}
+      />
       {/* <MembersAdminCard>New Member</MembersAdminCard>
       <MembersAdminCard>Message Everyone</MembersAdminCard> */}
     </MembersAdminWrapper>
