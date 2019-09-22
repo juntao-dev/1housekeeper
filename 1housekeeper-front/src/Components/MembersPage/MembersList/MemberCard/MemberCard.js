@@ -9,6 +9,7 @@ const MemberCardWrapper = styled.div`
   display: grid;
   grid-template-columns: 25% auto;
   padding: 0.5rem;
+  cursor: pointer;
 `;
 
 const CardImageWrapper = styled.div`

@@ -5,6 +5,8 @@ import MembersList from "./MembersList";
 import MembersAdmin from "./MembersAdmin";
 import SampleMembers from "./SampleMembers";
 
+// const appMembers = SampleMembers;
+
 const MembersPageWrapper = styled.div`
   display: grid;
   grid-template-columns: auto 50vw;
@@ -31,18 +33,34 @@ const MembersAdminBox = styled.div`
 
 const MembersPage = () => {
   const [currentMember, setCurrentMember] = useState(SampleMembers[0]);
+  const [appMembers, setAppMembers] = useState(SampleMembers);
+
   const selectCurrentMember = id => {
-    // console.log("clicked on id" + id);
     setCurrentMember(SampleMembers[id - 1]);
     console.log("current member " + JSON.stringify(SampleMembers[id - 1]));
+  };
+  const updateMemberDetails = member => {
+    let newList = appMembers;
+    newList[member.id - 1] = member;
+
+    setAppMembers(newList);
+    setCurrentMember(newList[member.id - 1]);
+
+    console.log(appMembers);
   };
 
   return (
     <MembersPageWrapper>
       <MembersInfoBox>
-        <MembersList currentMemberHandle={selectCurrentMember} />
+        <MembersList
+          appMembers={appMembers}
+          currentMemberHandle={selectCurrentMember}
+        />
       </MembersInfoBox>
-      <MembersAdmin member={currentMember} />
+      <MembersAdmin
+        member={currentMember}
+        updateMemberDetails={updateMemberDetails}
+      />
     </MembersPageWrapper>
   );
 };
