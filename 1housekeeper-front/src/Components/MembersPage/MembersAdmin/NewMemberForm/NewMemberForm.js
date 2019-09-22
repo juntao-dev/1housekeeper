@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { jsxOpeningElement } from "@babel/types";
 
 const NewMemberForm = props => {
+  const updateMemberDetails = props.updateMemberDetails;
+
   const [member, setMember] = useState({
+    id: props.member.id,
     name: props.member.name,
     role: props.member.role,
     mobile: props.member.mobile,
@@ -12,6 +16,7 @@ const NewMemberForm = props => {
 
   useEffect(() => {
     setMember({
+      id: props.member.id,
       name: props.member.name,
       role: props.member.role,
       mobile: props.member.mobile,
@@ -21,6 +26,7 @@ const NewMemberForm = props => {
     });
   }, [
     props.member.email,
+    props.member.id,
     props.member.mobile,
     props.member.name,
     props.member.photo,
@@ -32,8 +38,14 @@ const NewMemberForm = props => {
     setMember({ ...member, [name]: event.target.value });
   };
 
+  const handleSave = event => {
+    console.log(event);
+    updateMemberDetails(member);
+    event.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSave}>
       <label for="name">Name</label>
       <input
         id="name"
@@ -81,6 +93,7 @@ const NewMemberForm = props => {
         value={member.rent}
         onChange={handleChange("rent")}
       ></input>
+      <button type="submit">Save</button>
     </form>
   );
 };
